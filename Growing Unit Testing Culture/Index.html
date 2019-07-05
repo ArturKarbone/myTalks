@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Growing Unit Testing Culture</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Exo+2:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { 
+        font-family: 'Exo 2';         
+        background-color: black !important;
+      }
+      h1, h2, h3 {
+        font-family: 'Exo 2';
+        font-weight: normal;
+      }
+    
+      .strongy strong { padding: 0.2em 1em; background-color: black; opacity: 0.8; }
+      strong { border-bottom: 5px solid #e74c3c; color: white;}
+      .last-emphasize h3:last-of-type { font-weight: bold }
+      em { font-weight: bold; font-style: normal; }
+
+      .left { float: left; } .right { float: right }
+      .hide { visibility: hidden; }
+      .shorter { padding: 120px 350px;}
+      .corner-ribbon {
+        text-align: center;
+        background: #e74c3c;
+        width: 400px;
+        position: absolute;
+        top: 50px;
+        left: -150px;
+        padding: 0.5em;
+		transform: rotate(-45deg);
+        
+      }
+      
+      .headspace, .white { background-color: white !important; color: black !important}
+      .right-abs, img[alt="right-abs"] { top: 3em; right: 30px; position: absolute;}
+      img[alt="lean-ent"] { position: absolute; right: 30px; width: 300px !important; }
+      img[alt="right-abs"] {
+        box-shadow: 10px 10px 20px -10px rgba(0,0,0,0.75); 
+      }
+      .remark-slide-scaler { box-shadow: none; }
+      .remark-slide-content { background-size: 100%; background-color: black; color: white;}
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .almostblack { background-color: #091513 }
+      .invert { color: white; }
+      .strike { text-decoration: line-through;}
+      
+      .fa-lightbulb {color: #ffd300}
+      .fa-recycle { color: #e74c3c }
+      .oki { background-color: #3D9972; color: white;}
+      .oki strong { border-bottom-color: #3D9972; }
+      .bad { background-color: #e74c3c; color: white;}
+      .fade {color:#d3d3d3}
+      .fade strong {color:black}
+      .img100 img {width:122%; transform: rotate(90deg);}
+      .img70 img {width: 70%; transform: rotate(90deg);}
+	  .img50 img {width: 50%; transform: rotate(90deg);}
+	  .img60 img { width:60%; transform: rotate(90deg); margin-top:100px; }
+
+      .height100 { background-size: 90%; }
+      .height50 { background-size: 50%; }
+      .books {background-color: #3D9972}
+      
+      .growbot { background-color: #6A4CA6}
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# **Growing** Unit Testing **Culture**
+
+
+---
+# **Quality** is not negotiable
+
+--
+### Quality IS fun
+
+--
+### Quality IS long-term
+
+--
+### Quality IS speed
+
+--
+### Quality IS care
+
+--
+### Quality IS culture
+
+--
+### Quality IS reputation
+
+
+---
+# Your **Code** is Your **Face**
+
+
+---
+# **Respect** your work
+
+--
+## Continuous **improvement** or **degradation**?
+
+
+
+---
+# If you don't treat your code as shit in 6 month, you are **stagnating**.
+
+
+---
+# The **Broken window** effect
+
+
+---
+# The **Boy scout** rule
+
+---
+class: center
+# Predicting Quality on **primitive** metrics
+
+---
+class: center, img60
+# **Empty** Bottle Metric
+--
+
+![:ribbon Owned, small]
+![](assets/emptybottle.jpg)
+
+
+---
+class: center, img60
+#Spoon in **Sugar** Metric
+--
+
+![:ribbon Thug Life, small]
+![](assets/sugarspoon.jpg)
+
+
+---
+class: center, img60
+#**Messy** Table Metric
+--
+
+![:ribbon Deal with it, small]
+![](assets/messytable.jpg)
+
+
+---
+# A **good** unit test is ...
+
+... an automated piece of code that invokes the method or
+class being tested and then checks some assumptions about the logical
+behavior of that method or class. A unit test is almost always written
+using a unit-testing framework. It can be written easily and runs
+quickly. It’s fully automated, trustworthy, readable, and maintainable.
+
+
+---
+# Properties of a **good** unit test:
+
+--
+### It should be **automated** and repeatable
+
+--
+### It should be **easy** to implement
+
+--
+### Once it’s written, it should remain for **future use**
+
+--
+### **Anyone** should be able to run it
+
+--
+### It should run at the **push** of a button or **triggered**
+
+--
+### It should run **quickly**
+
+
+---
+# How to write **untestable** code?
+
+--
+### Non-deterministic
+
+--
+### Global state
+
+--
+### Static (aka procedural programming)
+
+--
+### Mix object initialization with logic
+
+--
+### Deep inheritance
+
+--
+### Conditions
+
+---
+# RED/GREEN/REFACTOR **mantra**
+
+--
+### Less code
+
+--
+### More tools
+
+---
+# DEMO
+
+https://github.com/ArturKarbone/xUnitTricks
+
+---
+# Questions
+
+    </textarea>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/remark/0.14.0/remark.min.js">
+    </script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script>
+            remark.macros.ribbon = function (text) {
+        var url = this;
+        return '<div class="corner-ribbon">' + text + '</div>';
+      };      
+      remark.macros.levels = function(text, one, two, three, four, five) {
+        return '<div class="left">' + text  + '</div>' + '<div class="right"><i class="' + one + ' fa-circle"></i> <i class="' + two + ' fa-circle"></i> <i class="' + three + ' fa-circle"></i> <i class="' + four + ' fa-circle"></i> <i class="' + five + ' fa-circle"></i></div>' +
+        '<div style="clear:both"></div>'        
+      };
+      var slideshow = remark.create({
+        ratio: '16:9',
+        slideNumberFormat: function (current, total) { return "" }
+      })
+    </script>
+  </body>
+</html>
