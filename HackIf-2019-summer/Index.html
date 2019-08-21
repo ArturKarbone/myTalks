@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Url Shortener</title>
+  <meta charset="utf-8">
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+    @import url(https://fonts.googleapis.com/css?family=Exo+2:400,700,400italic);
+    @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+    body {
+      font-family: 'Exo 2';
+      background-color: black !important;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Exo 2';
+      font-weight: normal;
+    }
+
+    .strongy strong {
+      padding: 0.2em 1em;
+      background-color: black;
+      opacity: 0.8;
+    }
+
+    strong {
+      border-bottom: 5px solid #e74c3c;
+      color: white;
+    }
+
+    .last-emphasize h3:last-of-type {
+      font-weight: bold
+    }
+
+    em {
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    .left {
+      float: left;
+    }
+
+    .right {
+      float: right
+    }
+
+    .hide {
+      visibility: hidden;
+    }
+
+    .shorter {
+      padding: 120px 350px;
+    }
+
+    .corner-ribbon {
+      text-align: center;
+      background: #e74c3c;
+      width: 400px;
+      position: absolute;
+      top: 50px;
+      left: -150px;
+      padding: 0.5em;
+      transform: rotate(-45deg);
+
+    }
+
+    .headspace,
+    .white {
+      background-color: white !important;
+      color: black !important
+    }
+
+    .right-abs,
+    img[alt="right-abs"] {
+      top: 3em;
+      right: 30px;
+      position: absolute;
+    }
+
+    img[alt="lean-ent"] {
+      position: absolute;
+      right: 30px;
+      width: 300px !important;
+    }
+
+    img[alt="right-abs"] {
+      box-shadow: 10px 10px 20px -10px rgba(0, 0, 0, 0.75);
+    }
+
+    .remark-slide-scaler {
+      box-shadow: none;
+    }
+
+    .remark-slide-content {
+      background-size: 100%;
+      background-color: black;
+      color: white;
+    }
+
+    .remark-code,
+    .remark-inline-code {
+      font-family: 'Ubuntu Mono';
+    }
+
+    .almostblack {
+      background-color: #091513
+    }
+
+    .invert {
+      color: white;
+    }
+
+    .strike {
+      text-decoration: line-through;
+    }
+
+    .fa-lightbulb {
+      color: #ffd300
+    }
+
+    .fa-recycle {
+      color: #e74c3c
+    }
+
+    .oki {
+      background-color: #3D9972;
+      color: white;
+    }
+
+    .oki strong {
+      border-bottom-color: #3D9972;
+    }
+
+    .bad {
+      background-color: #e74c3c;
+      color: white;
+    }
+
+    .fade {
+      color: #d3d3d3
+    }
+
+    .fade strong {
+      color: black
+    }
+
+    .img100 img {
+      width: 100%;
+    }
+
+    .img70 img {
+      width: 70%;
+      transform: rotate(90deg);
+    }
+
+    .img50 img {
+      width: 50%;
+    }
+
+    .img30 img {
+      width: 30%;
+    }
+
+    .img80 {
+      width: 80%;
+    }
+
+
+
+
+    .height100 {
+      background-size: 90%;
+    }
+
+    .height50 {
+      background-size: 50%;
+    }
+
+    .books {
+      background-color: #3D9972
+    }
+
+    .growbot {
+      background-color: #6A4CA6
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 12px;
+      right: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <textarea id="source">
+
+
+
+layout: true
+<div class="footer">
+  <img src="assets/logo.svg"/>
+ </div>
+
+---
+
+# **URL** Shortener
+  
+  ![](assets/scisors2.png)
+
+---
+# The **Benefits**/**Why**?
+
+--
+### Business **needs** them
+
+--
+###Customers are **used to** them
+
+--
+### They look **professionally**
+
+--
+###Links are **permanent**. **Restructure** internal stuff the way you want
+
+--
+###You can **"tweet"** them
+--
+
+###Keep analytical data on your side (level: **paranoid**)
+
+---
+#**DEMO**
+
+
+---
+#**Production** Ready
+
+--
+## CI/CD
+
+--
+## Build pipeline
+
+--
+
+## Deployment pipeline
+
+--
+![:ribbon Platform Team 	&#10084;, small]
+## Cross-Cutting Concerns: logging, monitoring, health checks, authentication
+
+
+---
+#**ROI**
+
+### Avergage business plan for SaaS **100 EUR/month**
+### Inhouse solution 5 developers X 16 hours X 45 EUR = **3600 EUR**
+### ROI = **36 months** 
+
+---
+class: img100
+##**Ship it!**
+
+
+![](assets/ShipIt.png)
+
+---
+#**Questions** & **Discussions**
+
+    </textarea>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/remark/0.14.0/remark.min.js">
+  </script>
+  <div>
+
+    <!-- <img src="assets/scisors2.png" class="img30"/> -->
+  </div>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <script>
+    remark.macros.ribbon = function (text) {
+      var url = this;
+      return '<div class="corner-ribbon">' + text + '</div>';
+    };
+    remark.macros.levels = function (text, one, two, three, four, five) {
+      return '<div class="left">' + text + '</div>' + '<div class="right"><i class="' + one + ' fa-circle"></i> <i class="' + two + ' fa-circle"></i> <i class="' + three + ' fa-circle"></i> <i class="' + four + ' fa-circle"></i> <i class="' + five + ' fa-circle"></i></div>' +
+        '<div style="clear:both"></div>'
+    };
+    var slideshow = remark.create({
+      ratio: '16:9',
+      slideNumberFormat: function (current, total) { return "" }
+    })
+  </script>
+</body>
+
+</html>
