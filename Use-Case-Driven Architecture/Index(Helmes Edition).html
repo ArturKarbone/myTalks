@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Use-Case-Driven Architecture</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Exo+2:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+      body { 
+        font-family: 'Exo 2';         
+        background-color: black !important;
+      }
+      h1, h2, h3 {
+        font-family: 'Exo 2';
+        font-weight: normal;
+      }
+    
+      .strongy strong { padding: 0.2em 1em; background-color: black; opacity: 0.8; }
+      strong { border-bottom: 5px solid #e74c3c; color: white;}
+      .last-emphasize h3:last-of-type { font-weight: bold }
+      em { font-weight: bold; font-style: normal; }
+
+      .left { float: left; } .right { float: right }
+      .hide { visibility: hidden; }
+      .shorter { padding: 120px 350px;}
+      .corner-ribbon {
+        text-align: center;
+        background: #e74c3c;
+        width: 400px;
+        position: absolute;
+        top: 50px;
+        left: -150px;
+        padding: 0.5em;
+		transform: rotate(-45deg);
+        
+      }
+      
+      .headspace, .white { background-color: white !important; color: black !important}
+      .right-abs, img[alt="right-abs"] { top: 3em; right: 30px; position: absolute;}
+      img[alt="lean-ent"] { position: absolute; right: 30px; width: 300px !important; }
+      img[alt="right-abs"] {
+        box-shadow: 10px 10px 20px -10px rgba(0,0,0,0.75); 
+      }
+      .remark-slide-scaler { box-shadow: none; }
+      .remark-slide-content { background-size: 100%; background-color: black; color: white;}
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+      .almostblack { background-color: #091513 }
+      .invert { color: white; }
+      .strike { text-decoration: line-through;}
+      
+      .fa-lightbulb {color: #ffd300}
+      .fa-recycle { color: #e74c3c }
+      .oki { background-color: #3D9972; color: white;}
+      .oki strong { border-bottom-color: #3D9972; }
+      .bad { background-color: #e74c3c; color: white;}
+      .fade {color:#d3d3d3}
+      .fade strong {color:black}
+      .img100 img {width:122%; transform: rotate(90deg);}
+      .img70 img {width: 70%; transform: rotate(90deg);}
+	  .img50 img { width:50%; }
+	  .img60 img { width:60%; }
+
+	  
+
+      .height100 { background-size: 90%; }
+      .height50 { background-size: 50%; }
+      .books {background-color: #3D9972}
+      
+      .growbot { background-color: #6A4CA6}
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle
+
+# **Use-Case-Driven** Architecture
+### Arturs Karbone
+### LinkedIn: https://www.linkedin.com/in/arturkarbone/
+### Blog: http://craftsmanatwork.guru/
+
+---
+# **They are** kind of about **the same**
+
+--
+###**Architecture in Slices** (J. Bogard)
+
+--
+###**Screaming/Clean Architecture **(Uncle Bob)
+
+--
+###**Feature-Driven/Use-Case-Driven** (A.Karbone & friends) 
+
+--
+###**Architecture of common sence** (A.Karbone & friends)     
+
+
+
+
+---
+# The typical **Solution Structure** I see
+![:ribbon 1st Issue, small]
+
+--
+###Includes **30+** projects
+
+--
+###**159** projects per solution **(personal record)**
+
+--
+###Projects **named**: \*.DALs, \*.BALs, \*.Helpers, \*.Services,\*.Common, \*.Migrators of any kinds
+
+--
+###Build & Run from **F5** or a **single script** ? Forget about it
+
+--
+###**Sane** Development Practices?
+
+
+
+---
+#The typical **Project Structure** I see
+![:ribbon 2nd Issue, small]
+
+
+
+---
+#Where is freaking entry point? Where should I start?
+![:ribbon 2nd Issue, small]
+
+--
+###Controllers
+
+--
+###Views
+
+--
+###Models
+
+--
+###Managers
+
+--
+###Services
+
+--
+###Interfaces (of course)
+---
+
+#The typical **Trend** i see
+![:ribbon 3rd Issue, small]
+
+--
+##Fancy frameworks at 1st place
+
+--
+##Business at 2nd (my very OPTIMISTIC opinion)
+
+--
+##«Button» thinking
+
+
+
+---
+class: center, img50
+#Building Architects solved this problem
+
+![](assets/buildings-church-1.png)
+--
+![:ribbon Church, small]
+
+---
+class: center, img50
+#Building Architects solved this problem
+
+![](assets/buildings-church-2.png)
+
+--
+![:ribbon Church, small]
+
+---
+class: center, img50
+#Building Architects solved this problem
+
+![](assets/buildings-house.png)
+
+--
+![:ribbon House, small]
+
+---
+class: center, img50
+#Building Architects solved this problem
+
+![](assets/buildings-dog-house.png)
+
+--
+![:ribbon Dog house, small]
+
+---
+class: center, img50
+#Building Architects solved this problem
+
+![](assets/buildings-store.png)
+
+--
+![:ribbon Store, small]
+
+---
+class: center
+#Can software architecture **scream** about the **intent**?
+
+--
+![:ribbon I think so, small]
+
+
+---
+class: center
+![](assets/Screaming-insurance.png)
+
+---
+class: center
+![](assets/Screaming-finance.png)
+
+---
+#**Anatomy** of business process
+
+--
+##Input data          
+
+--
+##Actions
+
+--
+##Results
+
+---
+class: center
+#**Anatomy** of Use-case: Layout
+
+--
+![:ribbon Layout, small]
+![](assets/anatomy-of-use-case-layout.png)
+
+---
+class: center
+#**Anatomy** of Use-case: Implementation
+
+--
+![:ribbon Implementation, small]
+![](assets/anatomy-of-use-case-code.png)
+
+---
+#**One-liners**  in content delivery mechanisms
+
+--
+![](assets/one-liners.png)
+
+---
+#**LOB** Application structure = **Use-cases** + **content delivery** mechanisms
+
+--
+##Frontend
+
+--
+##API
+
+--
+##SignalR
+
+--
+##Messaging
+
+--
+##Etc.
+
+---
+#**Roles**
+
+--
+##**Use cases** reflect business logic
+
+--
+##**Content Delivery** channels – one-liners calling use cases
+
+---
+#**Ideal Number** of projects in the solution
+
+--
+##**One** for all the Use Cases
+
+--
+##**One** per a Content Delivery channel
+
+---
+
+#**Benefits**
+
+--
+###Business logic in one place
+
+--
+###Wrap use case with an additional cross-cutting logic 
+
+--
+####Logging
+
+--
+####Performance Logging
+
+--
+####Wrap with additional context (Autofac/Correlation ID for Masstransit Consumers)
+
+
+---
+# **Quality** is not negotiable
+
+--
+### Quality IS fun
+
+--
+### Quality IS long-term
+
+--
+### Quality IS speed
+
+--
+### Quality IS care
+
+--
+### Quality IS culture
+
+--
+### Quality IS reputation
+
+
+---
+# Your **Code** is Your **Face**
+
+
+---
+# **Respect** your work
+
+--
+## Continuous **improvement** or **degradation**?
+
+
+
+---
+# If you don't treat your code as shit in 6 month, you are **stagnating**.
+
+---
+#**Takeaways**
+
+--
+##**Focus** on what matters
+
+--
+##We still have to follow frameworks trend (unfortunatelly). Choose your **ratio**
+
+--
+##PhD in **Getting Shits Done**
+
+--
+##**Business thinking** via Use-Cases/Features
+
+---
+#**Takeways**
+
+##It was **possible** to write this way **20 years ago**
+
+--
+##It will be actual **in 20 years**
+
+--
+##**Ship it!**
+
+---
+#**Resources**
+
+### SOLID architecture in Slices – https://vimeo.com/131633177
+###.NET Rocks! Fighting the Churn with Uncle Bob - https://dotnetrocks.com/?show=1350
+### Clean Code
+### Clean Coder
+### Clean Architecture
+
+---
+#Questions & Discussions
+
+    </textarea>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/remark/0.14.0/remark.min.js">
+    </script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script>
+            remark.macros.ribbon = function (text) {
+        var url = this;
+        return '<div class="corner-ribbon">' + text + '</div>';
+      };      
+      remark.macros.levels = function(text, one, two, three, four, five) {
+        return '<div class="left">' + text  + '</div>' + '<div class="right"><i class="' + one + ' fa-circle"></i> <i class="' + two + ' fa-circle"></i> <i class="' + three + ' fa-circle"></i> <i class="' + four + ' fa-circle"></i> <i class="' + five + ' fa-circle"></i></div>' +
+        '<div style="clear:both"></div>'        
+      };
+      var slideshow = remark.create({
+        ratio: '16:9',
+        slideNumberFormat: function (current, total) { return "" }
+      })
+    </script>
+  </body>
+</html>
