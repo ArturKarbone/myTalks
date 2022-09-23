@@ -1,78 +1,194 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Use-Case-Driven Architecture</title>
-    <meta charset="utf-8">
-    <style>
-      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
-      @import url(https://fonts.googleapis.com/css?family=Exo+2:400,700,400italic);
-      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
 
-      body { 
-        font-family: 'Exo 2';         
-        background-color: black !important;
-      }
-      h1, h2, h3 {
-        font-family: 'Exo 2';
-        font-weight: normal;
-      }
-    
-      .strongy strong { padding: 0.2em 1em; background-color: black; opacity: 0.8; }
-      strong { border-bottom: 5px solid #e74c3c; color: white;}
-      .last-emphasize h3:last-of-type { font-weight: bold }
-      em { font-weight: bold; font-style: normal; }
+<head>
+  <title>Use-Case-Driven Architecture</title>
+  <meta charset="utf-8">
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+    @import url(https://fonts.googleapis.com/css?family=Exo+2:400,700,400italic);
+    @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
 
-      .left { float: left; } .right { float: right }
-      .hide { visibility: hidden; }
-      .shorter { padding: 120px 350px;}
-      .corner-ribbon {
-        text-align: center;
-        background: #e74c3c;
-        width: 400px;
-        position: absolute;
-        top: 50px;
-        left: -150px;
-        padding: 0.5em;
-		transform: rotate(-45deg);
-        
-      }
-      
-      .headspace, .white { background-color: white !important; color: black !important}
-      .right-abs, img[alt="right-abs"] { top: 3em; right: 30px; position: absolute;}
-      img[alt="lean-ent"] { position: absolute; right: 30px; width: 300px !important; }
-      img[alt="right-abs"] {
-        box-shadow: 10px 10px 20px -10px rgba(0,0,0,0.75); 
-      }
-      .remark-slide-scaler { box-shadow: none; }
-      .remark-slide-content { background-size: 100%; background-color: black; color: white;}
-      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
-      .almostblack { background-color: #091513 }
-      .invert { color: white; }
-      .strike { text-decoration: line-through;}
-      
-      .fa-lightbulb {color: #ffd300}
-      .fa-recycle { color: #e74c3c }
-      .oki { background-color: #3D9972; color: white;}
-      .oki strong { border-bottom-color: #3D9972; }
-      .bad { background-color: #e74c3c; color: white;}
-      .fade {color:#d3d3d3}
-      .fade strong {color:black}
-      .img100 img {width:122%; transform: rotate(90deg);}
-      .img70 img {width: 70%; transform: rotate(90deg);}
-	  .img50 img { width:50%; }
-	  .img60 img { width:60%; }
+    body {
+      font-family: 'Exo 2';
+      background-color: black !important;
+    }
 
-	  
+    h1,
+    h2,
+    h3 {
+      font-family: 'Exo 2';
+      font-weight: normal;
+    }
 
-      .height100 { background-size: 90%; }
-      .height50 { background-size: 50%; }
-      .books {background-color: #3D9972}
-      
-      .growbot { background-color: #6A4CA6}
-    </style>
-  </head>
-  <body>
-    <textarea id="source">
+    .strongy strong {
+      padding: 0.2em 1em;
+      background-color: black;
+      opacity: 0.8;
+    }
+
+    strong {
+      border-bottom: 5px solid #e74c3c;
+      color: white;
+    }
+
+    .last-emphasize h3:last-of-type {
+      font-weight: bold
+    }
+
+    em {
+      font-weight: bold;
+      font-style: normal;
+    }
+
+    .left {
+      float: left;
+    }
+
+    .right {
+      float: right
+    }
+
+    .hide {
+      visibility: hidden;
+    }
+
+    .shorter {
+      padding: 120px 350px;
+    }
+
+    .corner-ribbon {
+      text-align: center;
+      background: #e74c3c;
+      width: 400px;
+      position: absolute;
+      top: 50px;
+      left: -150px;
+      padding: 0.5em;
+      transform: rotate(-45deg);
+
+    }
+
+    .headspace,
+    .white {
+      background-color: white !important;
+      color: black !important
+    }
+
+    .right-abs,
+    img[alt="right-abs"] {
+      top: 3em;
+      right: 30px;
+      position: absolute;
+    }
+
+    img[alt="lean-ent"] {
+      position: absolute;
+      right: 30px;
+      width: 300px !important;
+    }
+
+    img[alt="right-abs"] {
+      box-shadow: 10px 10px 20px -10px rgba(0, 0, 0, 0.75);
+    }
+
+    .remark-slide-scaler {
+      box-shadow: none;
+    }
+
+    .remark-slide-content {
+      background-size: 100%;
+      background-color: black;
+      color: white;
+    }
+
+    .remark-code,
+    .remark-inline-code {
+      font-family: 'Ubuntu Mono';
+    }
+
+    .almostblack {
+      background-color: #091513
+    }
+
+    .invert {
+      color: white;
+    }
+
+    .strike {
+      text-decoration: line-through;
+    }
+
+    .fa-lightbulb {
+      color: #ffd300
+    }
+
+    .fa-recycle {
+      color: #e74c3c
+    }
+
+    .oki {
+      background-color: #3D9972;
+      color: white;
+    }
+
+    .oki strong {
+      border-bottom-color: #3D9972;
+    }
+
+    .bad {
+      background-color: #e74c3c;
+      color: white;
+    }
+
+    .fade {
+      color: #d3d3d3
+    }
+
+    .fade strong {
+      color: black
+    }
+
+    .img100 img {
+      width: 122%;
+      transform: rotate(90deg);
+    }
+
+    .img70 img {
+      width: 70%;
+      transform: rotate(90deg);
+    }
+
+    .img50 img {
+      width: 50%;
+    }
+
+    .img60 img {
+      width: 60%;
+    }
+
+
+
+    .height100 {
+      background-size: 90%;
+    }
+
+    .height50 {
+      background-size: 50%;
+    }
+
+    .books {
+      background-color: #3D9972
+    }
+
+    .growbot {
+      background-color: #6A4CA6
+    }
+  </style>
+</head>
+
+<body>
+  <textarea id="source">
 
 class: center, middle
 
@@ -80,6 +196,17 @@ class: center, middle
 ### Arturs Karbone
 ### LinkedIn: https://www.linkedin.com/in/arturkarbone/
 ### Blog: http://craftsmanatwork.guru/
+
+---
+
+# I've been in this **business 15 years**.
+
+### **RRA** Core Team
+### **Sofftware Delivery Expert**
+### Failed **Stand-up** Comedian
+
+![](assets/IveBeenInThisBusiness15Years.jpg)
+
 
 ---
 # **They are** kind of about **the same**
@@ -96,7 +223,13 @@ class: center, middle
 --
 ###**Architecture of common sence** (A.Karbone & friends)     
 
+---
 
+# You can call Me **Susan** if it makes you happy
+
+
+
+![](assets/YouCanCallMeSusan.png)
 
 
 ---
@@ -124,7 +257,7 @@ class: center, middle
 #The typical **Project Structure** I see
 ![:ribbon 2nd Issue, small]
 
-
+TBD: MVC
 
 ---
 #Where is freaking entry point? Where should I start?
@@ -209,7 +342,7 @@ class: center, img50
 
 ---
 class: center
-#Can software architecture **scream** about the **intent**?
+#Can the software architecture **scream** about the **intent**?
 
 --
 ![:ribbon I think so, small]
@@ -224,7 +357,7 @@ class: center
 ![](assets/Screaming-finance.png)
 
 ---
-#**Anatomy** of business process
+#**Anatomy** of a business process
 
 --
 ##Input data          
@@ -368,7 +501,7 @@ class: center
 ---
 #**Takeways**
 
-##It was **possible** to write this way **20 years ago**
+##It was **possible** to write code this way **20 years ago**
 
 --
 ##It will be actual **in 20 years**
@@ -389,22 +522,24 @@ class: center
 #Questions & Discussions
 
     </textarea>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/remark/0.14.0/remark.min.js">
-    </script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <script>
-            remark.macros.ribbon = function (text) {
-        var url = this;
-        return '<div class="corner-ribbon">' + text + '</div>';
-      };      
-      remark.macros.levels = function(text, one, two, three, four, five) {
-        return '<div class="left">' + text  + '</div>' + '<div class="right"><i class="' + one + ' fa-circle"></i> <i class="' + two + ' fa-circle"></i> <i class="' + three + ' fa-circle"></i> <i class="' + four + ' fa-circle"></i> <i class="' + five + ' fa-circle"></i></div>' +
-        '<div style="clear:both"></div>'        
-      };
-      var slideshow = remark.create({
-        ratio: '16:9',
-        slideNumberFormat: function (current, total) { return "" }
-      })
-    </script>
-  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/remark/0.14.0/remark.min.js">
+  </script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <script>
+    remark.macros.ribbon = function (text) {
+      var url = this;
+      return '<div class="corner-ribbon">' + text + '</div>';
+    };
+    remark.macros.levels = function (text, one, two, three, four, five) {
+      return '<div class="left">' + text + '</div>' + '<div class="right"><i class="' + one + ' fa-circle"></i> <i class="' + two + ' fa-circle"></i> <i class="' + three + ' fa-circle"></i> <i class="' + four + ' fa-circle"></i> <i class="' + five + ' fa-circle"></i></div>' +
+        '<div style="clear:both"></div>'
+    };
+    var slideshow = remark.create({
+      ratio: '16:9',
+      slideNumberFormat: function (current, total) { return "" }
+    })
+  </script>
+</body>
+
 </html>
